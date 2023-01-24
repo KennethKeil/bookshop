@@ -27,7 +27,13 @@ export default {
     },
     methods: {
         updateInventory() {
-            console.log("Test")
+            console.log("Test");
+            localStorage.clear();
+
+            // fupdate-Books
+
+            this.$store.commit("cart/initCart");
+            this.$store.commit('products/init_store')
         }
     }
 }
