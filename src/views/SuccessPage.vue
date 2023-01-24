@@ -30,7 +30,7 @@ export default {
             console.log("Test");
             localStorage.clear();
 
-            // fupdate-Books
+            // update-Books
 
             this.$store.commit("cart/initCart");
             this.$store.commit('products/init_store')
