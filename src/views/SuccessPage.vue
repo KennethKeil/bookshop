@@ -13,7 +13,7 @@ import Header from '@/components/home/Header.vue'
 import PopularProducts from '@/components/home/PopularProducts.vue'
 import Placeholder from '@/components/home/Placeholder.vue'
 import Footer from '@/components/home/Footer.vue'
-import { mapGetters } from 'vuex'
+import {mapState, mapGetters} from 'vuex'
 
 export default {
     components: {
@@ -23,36 +23,37 @@ export default {
         Footer,
     },
     mounted() {
+        this.updateInventory();
         setTimeout(() => { 
             alert("Zahlung erfolgreich!")
         }, 100)
-        this.updateInventory();
     },
 
     computed: {
-      ...mapGetters('cart', {
-            products: 'cartProducts',
+        ...mapGetters('cart', {
+            cartProducts: 'cartProducts',
+        }),
+        ...mapState({
+            products: state => state.products.items
         }),
     },
 
     methods: {
         updateInventory() {
+            
+            this.cartProducts.forEach(cartProduct => {
+                this.products.forEach(product => {
+                    if (cartProduct.id === product.id) {
+                        console.log(product.id);
+                        console.log(product.inventory);
 
-            this.products.forEach(product => {
-                console.log(product.id);
+                        // axios.put(`https://ivm108.informatik.htw-dresden.de/ewa/g17/php-backend/update.php`, product)
+                    }
+                });
             });
 
+            // Error (funktioniert nicht!)
             localStorage.clear();
-
-            /*
-            // update-Books
-            const requests = this.products.map(product => {
-                axios.put(`https://ivm108.informatik.htw-dresden.de/ewa/g17/php-backend/update.php`, product)
-            });
-            Promise.all(requests).then(() => {
-                console.log("Update erfolgreich")
-            });
-            */
 
             this.$store.commit("cart/initCart");
             this.$store.commit('products/init_store')
