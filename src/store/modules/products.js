@@ -22,6 +22,17 @@ export default {
     },
 
     mutations: {
+        init_store(state) {
+            if (localStorage.getItem('products')) {
+                state.items = JSON.parse(localStorage.getItem('products'))
+            } else {
+                axios.get(`https://ivm108.informatik.htw-dresden.de/ewa/g17/php-backend/read.php`)
+                    .then(res => {
+                            state.items = res.data
+                        }
+                    )
+            }
+        },
         setProducts(state, products) {
             // update products
             state.items = products
@@ -29,11 +40,13 @@ export default {
 
         decrementProductInventory(state, product) {
             product.inventory--
+            localStorage.setItem('products',JSON.stringify(state.items))
         },
 
         incrementProductInventory(state, cartItem) {
             const product = state.items.find(item => item.id === cartItem.id)
             product.inventory++
+            localStorage.setItem('products',JSON.stringify(state.items))
         }
     },
 

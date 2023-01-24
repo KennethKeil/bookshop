@@ -30,6 +30,12 @@ export default {
     },
 
     mutations: {
+        initCart(state) {
+            if (localStorage.getItem('carts')) {
+                state.items = JSON.parse(localStorage.getItem('carts'))
+            }
+        },
+
         pushProductToCart(state, productId) {
             state.items.push({
                 id: productId,
@@ -70,6 +76,7 @@ export default {
                     commit('incrementItemQuantity', cartItem)
                 }
                 commit('products/decrementProductInventory', product, {root: true})
+                localStorage.setItem('carts', JSON.stringify(state.items))
             }
         },
 
@@ -81,11 +88,12 @@ export default {
                 commit('decrementItemQuantity', cartItem)
             }
             commit('products/incrementProductInventory', product, {root: true})
+            localStorage.setItem('carts', JSON.stringify(state.items))
         },
 
         checkout({state, commit}) {
             const cartItems = state.items;
-
+            localStorage.setItem('carts', JSON.stringify(state.items))
             console.log(cartItems);
         },
     }
