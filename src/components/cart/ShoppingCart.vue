@@ -33,6 +33,8 @@
 </template>
 
 <script>
+  /* eslint-disable */
+  import products from '@/store/modules/products';
   import {mapState, mapGetters, mapActions} from 'vuex'
   export default {
     props: {
@@ -46,13 +48,13 @@
 
       ...mapState('cart', {
         checkoutStatus: state => state.checkoutStatus
-      })
+      }),
     },
 
     methods: {
       ...mapActions({
         removeProductFromCart: 'cart/removeProductFromCart'
-      })
+      }),
     }
   }
 </script>

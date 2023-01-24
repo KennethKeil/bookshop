@@ -18,5 +18,4 @@ axios.get(`https://ivm108.informatik.htw-dresden.de/ewa/g17/php-backend/read.php
         }).$mount('#app')
 
     })
-
-
+    
