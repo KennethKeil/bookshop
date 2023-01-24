@@ -31,9 +31,9 @@
         loading: false,
         lineItems: [],
         successURL: 'http://localhost:8080/success',
-        // successURL: 'https://ivm108.informatik.htw-dresden.de/ewa/g17/success',
+        // successURL: 'https://ivm108.informatik.htw-dresden.de/ewa/g17/shop/success',
         cancelURL: 'http://localhost:8080/error',
-        // cancelURL: 'https://ivm108.informatik.htw-dresden.de/ewa/g17/error',
+        // cancelURL: 'https://ivm108.informatik.htw-dresden.de/ewa/g17/shop/error',
       }
     },
 

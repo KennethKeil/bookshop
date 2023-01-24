@@ -7,10 +7,13 @@
   </div>
 </template>
 <script>
+/* eslint-disable */
+import axios from 'axios';
 import Header from '@/components/home/Header.vue'
 import PopularProducts from '@/components/home/PopularProducts.vue'
 import Placeholder from '@/components/home/Placeholder.vue'
 import Footer from '@/components/home/Footer.vue'
+import { mapGetters } from 'vuex'
 
 export default {
     components: {
@@ -22,18 +25,38 @@ export default {
     mounted() {
         setTimeout(() => { 
             alert("Zahlung erfolgreich!")
-            this.updateInventory();
         }, 100)
+        this.updateInventory();
     },
+
+    computed: {
+      ...mapGetters('cart', {
+            products: 'cartProducts',
+        }),
+    },
+
     methods: {
         updateInventory() {
-            console.log("Test");
+
+            this.products.forEach(product => {
+                console.log(product.id);
+            });
+
             localStorage.clear();
 
+            /*
             // update-Books
+            const requests = this.products.map(product => {
+                axios.put(`https://ivm108.informatik.htw-dresden.de/ewa/g17/php-backend/update.php`, product)
+            });
+            Promise.all(requests).then(() => {
+                console.log("Update erfolgreich")
+            });
+            */
 
             this.$store.commit("cart/initCart");
             this.$store.commit('products/init_store')
+
         }
     }
 }
