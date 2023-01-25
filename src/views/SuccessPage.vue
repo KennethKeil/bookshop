@@ -52,11 +52,11 @@ export default {
                 });
             });
 
-            // Error (funktioniert nicht!)
+            // Error (funktioniert leider nicht!)
             localStorage.clear();
 
-            this.$store.commit("cart/initCart");
-            this.$store.commit('products/init_store')
+            this.$store.commit('cart/initCart');
+            this.$store.commit('products/initStore')
 
         }
     }

@@ -13,8 +13,8 @@ new Vue({
     router,
     store: store,
     beforeCreate() {
-        this.$store.commit('products/init_store')
-        this.$store.commit("cart/initCart")
+        this.$store.commit('products/initStore')
+        this.$store.commit('cart/initCart')
     },
     render: h => h(App)
 }).$mount('#app')

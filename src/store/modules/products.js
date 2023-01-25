@@ -22,7 +22,7 @@ export default {
     },
 
     mutations: {
-        init_store(state) {
+        initStore(state) {
             if (localStorage.getItem('products')) {
                 state.items = JSON.parse(localStorage.getItem('products'))
             } else {
