@@ -3,7 +3,11 @@
         <v-row>
             <v-col sm="3" offset-lg="1">
                 <div>
-                <h2 class="heading">Über mich</h2>
+                    <h2 class="heading">Über mich</h2>
+                    <div class="about-me-container">
+                        <img src="../assets/images/avatar-dummy.jpeg" class="profile-picture" alt="Profile Picture">
+                        <p>Dummy Text</p>
+                    </div>
                 </div>
             </v-col>
             <v-col sm="9" lg="7">
@@ -70,5 +74,9 @@ export default {
 <style scoped>
 .heading {
     margin-top: 40px;
+}
+.profile-picture {
+    width: 180px;
+    height: 180px;
 }
 </style>
