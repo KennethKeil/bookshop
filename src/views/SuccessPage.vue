@@ -33,14 +33,11 @@ export default {
     ...mapGetters('cart', {
       cartProducts: 'cartProducts',
     }),
-    /*
     ...mapGetters('order', {
       order: 'order',
     }),
-    */
     ...mapState({
       products: state => state.products.items,
-      order: state => state.order.items
     }),
   },
 
@@ -50,16 +47,14 @@ export default {
       this.cartProducts.forEach(cartProduct => {
         this.products.forEach(product => {
           if (cartProduct.id === product.id) {
-            console.log(product.id);
-            console.log(product.inventory);
-
             // axios.put(`https://ivm108.informatik.htw-dresden.de/ewa/g17/php-backend/update.php`, product)
           }
         });
       });
 
-      console.log("Test Order");
-      console.log(this.order.name);
+      console.log("Test Data inside order:");
+      console.log(this.$store.state.order);
+      console.log(this.order);
       // axios.post(`https://ivm108.informatik.htw-dresden.de/ewa/g17/php-backend/create.php`, order)
 
       localStorage.clear()

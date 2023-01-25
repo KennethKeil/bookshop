@@ -112,12 +112,6 @@ export default {
   methods: {
     ...mapActions('cart', ['checkout']),
     submit() {
-      console.log("initOrder Testpoint 1");
-
-      console.log("Name: ", this.name);
-      console.log("Street: ", this.street);
-      console.log("Zip: ", this.zip);
-      console.log("City: ", this.city);
 
       this.order.name = this.name;
       this.order.street = this.street;
