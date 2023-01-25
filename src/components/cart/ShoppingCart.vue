@@ -11,11 +11,11 @@
         </v-card-title>
 
         <v-card-subtitle>
-          ${{ product.price }}
+          ${{ product.price }}€
         </v-card-subtitle>
 
         <v-card-subtitle>
-          {{ product.quantity }}
+          Anzahl: {{ product.quantity }}
         </v-card-subtitle>
 
         <v-btn
