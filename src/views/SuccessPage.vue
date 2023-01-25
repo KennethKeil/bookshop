@@ -56,7 +56,7 @@ export default {
             }
         });
       });
-      localStorage.clear()
+      // localStorage.clear()
     }
   }
 }
