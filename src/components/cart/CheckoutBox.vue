@@ -5,7 +5,7 @@
         <v-card-text>
             <p>Total: ${{total}}</p>
             <v-text-field label="Name" v-model="name" :error-messages="nameErrors" />
-            <v-text-field label="Straße" v-model="street" :error-messages="streetErrors" />
+            <v-text-field label="Straße und Nr." v-model="street" :error-messages="streetErrors" />
             <v-text-field label="PLZ" v-model="zip" :error-messages="zipErrors" />
             <v-text-field label="Stadt" v-model="city" :error-messages="cityErrors" />
             <!--<button @click="displayOrder">Display Order</button>-->

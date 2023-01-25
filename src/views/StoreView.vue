@@ -23,6 +23,7 @@
     </v-row>
   </v-container>
 </template>
+
 <script>
   /* eslint-disable */
   import {mapState, mapActions} from 'vuex'

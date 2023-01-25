@@ -10,10 +10,10 @@
         justify="center"
       >
         <h1 class="display-3 hidden-xs-only">
-          Willkommen in meinem Buchladen!
+          Willkommen im Buchladen!
         </h1>
         <h1 class="text-center display-1 hidden-sm-and-up">
-          Willkommen in meinem Buchladen!
+          Willkommen im Buchladen!
         </h1>
       </v-row>
     </v-container>

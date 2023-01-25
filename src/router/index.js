@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import StoreView from '../views/StoreView.vue'
 import CartView from '../views/CartView.vue'
+import ContactView from '../views/ContactView.vue'
 import SuccessPage from '../views/SuccessPage.vue'
 import ErrorPage from '../views/ErrorPage.vue'
 
@@ -23,6 +24,11 @@ const routes = [
     path: '/cart',
     name: 'cart',
     component: CartView
+  },
+  { 
+    path: '/contact',
+    name: 'contact',
+    component: ContactView
   },
   { 
     path: '/success',

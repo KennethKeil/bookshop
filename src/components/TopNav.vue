@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app-bar color="primary" dark>
-      <v-toolbar-title class="text-lg-center" @click="navigateToHome">Buchladen.de</v-toolbar-title>
+      <v-toolbar-title class="text-lg-center" @click="navigateToHome">MyBookshop.de</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -27,6 +27,10 @@
         <v-btn to="cart" text>
           <v-icon>mdi-cart</v-icon>
           Cart
+        </v-btn>
+        <v-btn to="contact" text>
+          <v-icon>mdi-email</v-icon>
+          Kontakt
         </v-btn>
       </v-toolbar-items>
     </v-app-bar>
@@ -65,7 +69,8 @@ export default {
       items: [
         { title: 'Home', link: '/', icon: 'home' },
         { title: 'Store', link: 'store', icon: 'store' },
-        { title: 'Cart', link: 'cart', icon: 'cart' }
+        { title: 'Cart', link: 'cart', icon: 'cart' },
+        { title: 'Contact', link: 'contact,', icon: 'email'}
       ]
     }
   },
