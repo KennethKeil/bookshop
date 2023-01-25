@@ -16,7 +16,8 @@ export default new Vuex.Store({
     },
 
     state: { // = data
-        cart: []
+        cart: [],
+        order: []
     },
 
     getters: { // = computed properties

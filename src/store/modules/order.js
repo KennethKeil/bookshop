@@ -3,20 +3,28 @@ export default {
     namespaced: true,
 
     state: {
-        items: {
-            name: '',
-            street: '',
-            zip: '',
-            city: '',
+        items: []
+    },
+
+    getters: {
+        order(state, getters, rootState, rootGetters) {
+            return state.items.map(item => {
+                return {
+                    name: item.name,
+                    street: item.street,
+                    zip: item.zip,
+                    city: item.city    
+                }
+            })
         },
     },
 
     mutations: {
-        initOrder(state, name, street, zip, city) {
-            state.items.name = name;
-            state.items.street = street;
-            state.items.zip = zip;
-            state.items.city = city;
+        initOrder(state, order) {
+            state.items.name = order.name;
+            state.items.street = order.street;
+            state.items.zip = order.zip;
+            state.items.city = order.city;
 
             console.log("Testpoint 2");
 

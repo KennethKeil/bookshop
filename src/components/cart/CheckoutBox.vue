@@ -38,6 +38,13 @@ export default {
       loading: false,
 
       // order attributes
+      order: {
+        name: '',
+        street: '',
+        zip: '',
+        city: '',
+      },
+
       name: '',
       street: '',
       zip: '',
@@ -112,7 +119,12 @@ export default {
       console.log("Zip: ", this.zip);
       console.log("City: ", this.city);
 
-      this.$store.commit('order/initOrder', this.name, this.street, this.zip, this.city)
+      this.order.name = this.name;
+      this.order.street = this.street;
+      this.order.zip = this.zip;
+      this.order.city = this.city;
+
+      this.$store.commit('order/initOrder', this.order)
       this.$refs.checkoutRef.redirectToCheckout({items: this.lineItems})
     },
   }
