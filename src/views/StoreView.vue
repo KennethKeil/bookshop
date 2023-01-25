@@ -6,7 +6,7 @@
       </v-col>
       <v-col sm="9" lg="7">
         <div>
-          <h3>Products</h3>
+          <h2>Books</h2>
           <!-- list of product cards that wraps -->
           <v-row>
             <v-col
@@ -66,5 +66,8 @@
 </script>
 
 <style scoped>
-
+h2 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
 </style>

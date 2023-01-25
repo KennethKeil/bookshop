@@ -3,7 +3,7 @@
     <v-row>
         <v-col sm="8" offset-md="2" lg="4" offset-lg="2">
           <div>
-            <h1>Shopping Cart</h1>
+            <h2>Shopping Cart</h2>
             <v-row
               v-for="product in products" :key="product.id"
             >
@@ -39,3 +39,10 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+h2 {
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+</style>

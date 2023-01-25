@@ -23,7 +23,7 @@ export default {
         Footer,
     },
     mounted() {
-        this.updateInventory();
+        this.updateState();
         setTimeout(() => { 
             alert("Zahlung erfolgreich!")
         }, 100)
@@ -39,7 +39,7 @@ export default {
     },
 
     methods: {
-        updateInventory() {
+        updateState() {
             
             this.cartProducts.forEach(cartProduct => {
                 this.products.forEach(product => {
@@ -51,6 +51,8 @@ export default {
                     }
                 });
             });
+
+            // axios.post(`https://ivm108.informatik.htw-dresden.de/ewa/g17/php-backend/update.php`, product)
 
             // Error (funktioniert leider nicht!)
             localStorage.clear();

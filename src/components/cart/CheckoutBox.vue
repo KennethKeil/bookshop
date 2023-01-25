@@ -36,14 +36,19 @@ export default {
 
         return {
             loading: false,
+
+            // order attributes
             name: '',
             street: '',
             zip: '',
             city: '',
+
+            // input validations
             nameErrors: [],
             streetErrors: [],
             zipErrors: [],
             cityErrors: [],
+
             lineItems: [],
             successURL: 'http://localhost:8080/success',
             // successURL: 'https://ivm108.informatik.htw-dresden.de/ewa/g17/shop/success',
@@ -100,6 +105,7 @@ export default {
     methods: {
         ...mapActions('cart', ['checkout']),
         submit(){
+            console.log("createOrderFunction aufrufen");
             this.$refs.checkoutRef.redirectToCheckout({items: this.lineItems})
         },
         displayOrder() {
