@@ -9,12 +9,12 @@
           <h2>Alle Bücher</h2>
           <!-- list of product cards that wraps -->
           <v-row>
-            <v-col
-                v-for="product in filteredProducts"
-                :key="product.id"
-                md="4"
-                sm="6"
-            >
+          <v-col
+              v-for="product in filteredProducts"
+              :key="product.id"
+              md="6"
+              sm="12"
+          >
               <ProductCard :product="product"/>
             </v-col>
           </v-row>

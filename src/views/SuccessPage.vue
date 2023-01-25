@@ -46,24 +46,19 @@ export default {
           if (cartProduct.id === product.id) {
 
             axios.put(`https://ivm108.informatik.htw-dresden.de/ewa/g17/php-backend/update.php`, product)
-                .then(results => {
-                  console.log(localStorage.getItem('order'))
-                  console.log("Test Data inside order:");
-                  //console.log(this.$store.state.order);//
-                  //console.log(this.order);
-                  axios.post(`https://ivm108.informatik.htw-dresden.de/ewa/g17/php-backend/create.php`, JSON.parse(localStorage.getItem('order')))
-                  localStorage.clear()
-                  this.$store.commit('cart/clearCart');
-                  this.$store.commit('products/initStore')
-                })
-
-          }
+              .then(results => {
+                console.log(localStorage.getItem('order'))
+                axios.post(`https://ivm108.informatik.htw-dresden.de/ewa/g17/php-backend/create.php`, JSON.parse(localStorage.getItem('order')))
+                localStorage.clear()
+                this.$store.commit('cart/clearCart');
+                this.$store.commit('products/initStore')
+              })
+            }
         });
       });
       localStorage.clear()
     }
   }
 }
-
 
 </script>

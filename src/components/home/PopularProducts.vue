@@ -1,5 +1,5 @@
 <template>
-  <v-container class="fill-height mb-12">
+  <v-container class="fill-height mb-12 container-class">
     <v-row>
       <v-col lg="8" offset-lg="2" offset-sm="1" sm="10">
         <h2>Empfohlene Bücher
@@ -13,8 +13,8 @@
           <v-col
               v-for="product in products.slice(0, 3)"
               :key="product.id"
-              md="4"
-              sm="6"
+              md="6"
+              sm="12"
           >
             <ProductCard :product="product"/>
           </v-col>
@@ -58,5 +58,8 @@ export default {
 </script>
 
 <style scoped>
-
+.container-class {
+  display: flex;
+  justify-content: center;
+}
 </style>

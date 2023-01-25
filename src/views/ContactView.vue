@@ -6,7 +6,8 @@
           <h2 class="heading">Über mich</h2>
           <div class="about-me-container">
             <img alt="Profile Picture" class="profile-picture" src="../assets/images/avatar-dummy.jpeg">
-            <p>Dummy Text</p>
+            <p>Kenneth-Raphael Keil</p>
+            <p>s79578</p>
           </div>
         </div>
       </v-col>
@@ -72,12 +73,15 @@ export default {
 </script>
 
 <style scoped>
-.heading {
-  margin-top: 40px;
-}
-
 .profile-picture {
   width: 180px;
   height: 180px;
+}
+.heading {
+    text-align: center;
+    margin-top: 40px;
+}
+.about-me-container {
+    text-align: center;
 }
 </style>

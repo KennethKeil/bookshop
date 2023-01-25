@@ -57,10 +57,10 @@ export default {
       cityErrors: [],
 
       lineItems: [],
-      successURL: 'http://localhost:8080/success',
-      // successURL: 'https://ivm108.informatik.htw-dresden.de/ewa/g17/shop/success',
-      cancelURL: 'http://localhost:8080/error',
-      // cancelURL: 'https://ivm108.informatik.htw-dresden.de/ewa/g17/shop/error',
+      // successURL: 'http://localhost:8080/success',
+      successURL: 'https://ivm108.informatik.htw-dresden.de/ewa/g17/shop/success',
+      // cancelURL: 'http://localhost:8080/error',
+      cancelURL: 'https://ivm108.informatik.htw-dresden.de/ewa/g17/shop/error',
     }
   },
 
