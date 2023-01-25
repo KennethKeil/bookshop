@@ -3,29 +3,30 @@ export default {
     namespaced: true,
 
     state: {
-        items: []
+        items: {}
     },
 
     getters: {
         order(state) {
-            return state.items;
+            const order = state.items
+            return {
+                name: order.name,
+                street: order.street,
+                zip: order.zip,
+                city: order.city,
+            };
         },
     },
 
     mutations: {
-        initOrder(state, order) {
-            state.items.push({
-                name: order.name,
-                street: order.street,
-                zip: order.zip,
-                city: order.city
-            });
 
-            console.log(state.items);
+        initOrder(state, order) {
+            state.items = order
+            localStorage.setItem('order', JSON.stringify(state.items))
         }
+
+
     },
 
-    actions: {
-
-    }
+    actions: {}
 }
