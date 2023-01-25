@@ -1,14 +1,14 @@
 <template>
-  <v-card 
-    outlined
-    min-width="100%"
-    class="mb-5 pa-4"
-    style="background-color: #f8f9fa; box-shadow: 0px 0px 5px 0px #ccc"
+  <v-card
+      class="mb-5 pa-4"
+      min-width="100%"
+      outlined
+      style="background-color: #f8f9fa; box-shadow: 0px 0px 5px 0px #ccc"
   >
     <div class="d-flex">
       <div class="d-flex flex-column justify-center">
         <v-card-title class="pt-0">
-          {{ product.title}}
+          {{ product.title }}
         </v-card-title>
 
         <v-card-subtitle>
@@ -20,12 +20,12 @@
         </v-card-subtitle>
 
         <v-btn
-          color="error"
-          class="ml-4"
-          @click="removeProductFromCart(product)"
-          outlined
-          small
-          style="width: 140px"
+            class="ml-4"
+            color="error"
+            outlined
+            small
+            style="width: 140px"
+            @click="removeProductFromCart(product)"
         >
           entfernen
         </v-btn>
@@ -35,30 +35,31 @@
 </template>
 
 <script>
-  /* eslint-disable */
-  import products from '@/store/modules/products';
-  import {mapState, mapGetters, mapActions} from 'vuex'
-  export default {
-    props: {
-      product: Object,
-    },
+/* eslint-disable */
+import products from '@/store/modules/products';
+import {mapState, mapGetters, mapActions} from 'vuex'
 
-    computed: {
-      ...mapGetters('cart', {
-        products: 'cartProducts',
-      }),
+export default {
+  props: {
+    product: Object,
+  },
 
-      ...mapState('cart', {
-        checkoutStatus: state => state.checkoutStatus
-      }),
-    },
+  computed: {
+    ...mapGetters('cart', {
+      products: 'cartProducts',
+    }),
 
-    methods: {
-      ...mapActions({
-        removeProductFromCart: 'cart/removeProductFromCart'
-      }),
-    }
+    ...mapState('cart', {
+      checkoutStatus: state => state.checkoutStatus
+    }),
+  },
+
+  methods: {
+    ...mapActions({
+      removeProductFromCart: 'cart/removeProductFromCart'
+    }),
   }
+}
 </script>
 
 <style scoped>

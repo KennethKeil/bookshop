@@ -10,43 +10,43 @@ import ErrorPage from '../views/ErrorPage.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/store',
-    name: 'store',
-    component: StoreView
-  },
-  { 
-    path: '/cart',
-    name: 'cart',
-    component: CartView
-  },
-  { 
-    path: '/contact',
-    name: 'contact',
-    component: ContactView
-  },
-  { 
-    path: '/success',
-    name: 'Success',
-    component: SuccessPage
-  },
-  { 
-    path: '/error',
-    name: 'Error',
-    component: ErrorPage
-  },
+    {
+        path: '/',
+        name: 'home',
+        component: HomeView
+    },
+    {
+        path: '/store',
+        name: 'store',
+        component: StoreView
+    },
+    {
+        path: '/cart',
+        name: 'cart',
+        component: CartView
+    },
+    {
+        path: '/contact',
+        name: 'contact',
+        component: ContactView
+    },
+    {
+        path: '/success',
+        name: 'Success',
+        component: SuccessPage
+    },
+    {
+        path: '/error',
+        name: 'Error',
+        component: ErrorPage
+    },
 
 ]
 
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes
 })
 
 export default router

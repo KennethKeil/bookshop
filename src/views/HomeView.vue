@@ -1,9 +1,9 @@
 <template>
   <div>
-    <Header />
-    <PopularProducts />
-    <Placeholder />
-    <Footer />
+    <Header/>
+    <PopularProducts/>
+    <Placeholder/>
+    <Footer/>
   </div>
 </template>
 

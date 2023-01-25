@@ -8,24 +8,22 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
 
-  modules: {
-    cart,
-    products
-  },
+    modules: {
+        cart,
+        products
+    },
 
-  state: { // = data
-    cart: []
-  },
+    state: { // = data
+        cart: []
+    },
 
-  getters: { // = computed properties
+    getters: { // = computed properties
 
-  },
+    },
 
-  actions,
+    actions,
 
-  mutations: {
-
-  }
+    mutations: {}
 })
 
 

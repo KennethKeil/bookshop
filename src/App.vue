@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <TopNav />
+    <TopNav/>
     <v-main class="mb-4">
       <router-view></router-view>
     </v-main>

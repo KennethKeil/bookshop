@@ -1,19 +1,19 @@
 <template>
   <v-container>
     <v-row>
-        <v-col sm="8" offset-md="2" lg="4" offset-lg="2">
-          <div>
-            <h2>Bestellübersicht</h2>
-            <v-row
+      <v-col lg="4" offset-lg="2" offset-md="2" sm="8">
+        <div>
+          <h2>Bestellübersicht</h2>
+          <v-row
               v-for="product in products" :key="product.id"
-            >
-              <ShoppingCart :product="product"/>
-            </v-row>
-          </div>
-        </v-col>
-      <v-col sm="4" md="3" order="first" order-sm="last">
-         <div>
-          <CheckoutBox />
+          >
+            <ShoppingCart :product="product"/>
+          </v-row>
+        </div>
+      </v-col>
+      <v-col md="3" order="first" order-sm="last" sm="4">
+        <div>
+          <CheckoutBox/>
         </div>
       </v-col>
     </v-row>

@@ -40,13 +40,13 @@ export default {
 
         decrementProductInventory(state, product) {
             product.inventory--
-            localStorage.setItem('products',JSON.stringify(state.items))
+            localStorage.setItem('products', JSON.stringify(state.items))
         },
 
         incrementProductInventory(state, cartItem) {
             const product = state.items.find(item => item.id === cartItem.id)
             product.inventory++
-            localStorage.setItem('products',JSON.stringify(state.items))
+            localStorage.setItem('products', JSON.stringify(state.items))
         }
     },
 

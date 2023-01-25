@@ -1,33 +1,33 @@
 <template>
-    <v-container>
-        <v-row>
-            <v-col sm="3" offset-lg="1">
-                <div>
-                    <h2 class="heading">Über mich</h2>
-                    <div class="about-me-container">
-                        <img src="../assets/images/avatar-dummy.jpeg" class="profile-picture" alt="Profile Picture">
-                        <p>Dummy Text</p>
-                    </div>
-                </div>
-            </v-col>
-            <v-col sm="9" lg="7">
-                <div>
-                <h2 class="heading">Kontaktformular</h2>
-                    <v-form ref="form" v-model="valid" @submit.prevent="submitForm">
-                      <v-card-text>
-                        <v-text-field v-model="name" :rules="nameRules" label="Name"/>
-                        <v-text-field v-model="firstname" :rules="firstnameRules" label="Vorname"/>
-                        <v-text-field v-model="email" :rules="emailRules" label="E-Mail"/>
-                        <v-text-field v-model="message" :rules="messageRules" label="Nachricht"/>
-    
-                        <v-btn type="submit" :disabled="!valid">absenden</v-btn>
-                      </v-card-text>
-                    </v-form>
-                    <div v-if="submitted && valid" class="success-message">Input valid</div>
-                </div>
-            </v-col>
-        </v-row>
-    </v-container>
+  <v-container>
+    <v-row>
+      <v-col offset-lg="1" sm="3">
+        <div>
+          <h2 class="heading">Über mich</h2>
+          <div class="about-me-container">
+            <img alt="Profile Picture" class="profile-picture" src="../assets/images/avatar-dummy.jpeg">
+            <p>Dummy Text</p>
+          </div>
+        </div>
+      </v-col>
+      <v-col lg="7" sm="9">
+        <div>
+          <h2 class="heading">Kontaktformular</h2>
+          <v-form ref="form" v-model="valid" @submit.prevent="submitForm">
+            <v-card-text>
+              <v-text-field v-model="name" :rules="nameRules" label="Name"/>
+              <v-text-field v-model="firstname" :rules="firstnameRules" label="Vorname"/>
+              <v-text-field v-model="email" :rules="emailRules" label="E-Mail"/>
+              <v-text-field v-model="message" :rules="messageRules" label="Nachricht"/>
+
+              <v-btn :disabled="!valid" type="submit">absenden</v-btn>
+            </v-card-text>
+          </v-form>
+          <div v-if="submitted && valid" class="success-message">Input valid</div>
+        </div>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
@@ -73,10 +73,11 @@ export default {
 
 <style scoped>
 .heading {
-    margin-top: 40px;
+  margin-top: 40px;
 }
+
 .profile-picture {
-    width: 180px;
-    height: 180px;
+  width: 180px;
+  height: 180px;
 }
 </style>

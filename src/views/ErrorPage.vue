@@ -1,9 +1,9 @@
 <template>
   <div>
-    <Header />
-    <PopularProducts />
-    <Placeholder />
-    <Footer />
+    <Header/>
+    <PopularProducts/>
+    <Placeholder/>
+    <Footer/>
   </div>
 </template>
 
@@ -14,16 +14,16 @@ import Placeholder from '@/components/home/Placeholder.vue'
 import Footer from '@/components/home/Footer.vue'
 
 export default {
-    components: {
-        Header,
-        PopularProducts,
-        Placeholder,
-        Footer,
-    },
-    mounted() {
-        setTimeout(() => {
-            alert("Zahlung fehlgeschlagen!")
-        }, 100)
-    }
+  components: {
+    Header,
+    PopularProducts,
+    Placeholder,
+    Footer,
+  },
+  mounted() {
+    setTimeout(() => {
+      alert("Zahlung fehlgeschlagen!")
+    }, 100)
+  }
 }
 </script>

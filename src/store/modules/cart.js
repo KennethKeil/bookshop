@@ -35,6 +35,9 @@ export default {
                 state.items = JSON.parse(localStorage.getItem('carts'))
             }
         },
+        clearCart(state) {
+            state.items = []
+        },
 
         pushProductToCart(state, productId) {
             state.items.push({

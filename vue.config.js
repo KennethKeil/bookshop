@@ -1,7 +1,7 @@
-const { defineConfig } = require('@vue/cli-service')
+const {defineConfig} = require('@vue/cli-service')
 module.exports = defineConfig({
-  // publicPath: '/ewa/g17/shop/',
-  transpileDependencies: [
-    'vuetify'
-  ]
+    // publicPath: '/ewa/g17/shop/',
+    transpileDependencies: [
+        'vuetify'
+    ]
 })

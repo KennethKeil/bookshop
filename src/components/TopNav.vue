@@ -8,7 +8,7 @@
       <!-- mobile menu button -->
       <span class="hidden-sm-and-up">
         <v-btn
-          @click.stop="drawer = !drawer"
+            @click.stop="drawer = !drawer"
         >
           Menu
         </v-btn>
@@ -16,19 +16,19 @@
 
       <!-- desktop & tablet menu -->
       <v-toolbar-items class="hidden-xs-only">
-        <v-btn to="/" text>
+        <v-btn text to="/">
           <v-icon>mdi-home</v-icon>
           Home
         </v-btn>
-        <v-btn to="store" text>
+        <v-btn text to="store">
           <v-icon>mdi-store</v-icon>
           Bücher
         </v-btn>
-        <v-btn to="cart" text>
+        <v-btn text to="cart">
           <v-icon>mdi-cart</v-icon>
           Cart
         </v-btn>
-        <v-btn to="contact" text>
+        <v-btn text to="contact">
           <v-icon>mdi-email</v-icon>
           Kontakt
         </v-btn>
@@ -36,17 +36,17 @@
     </v-app-bar>
 
     <v-navigation-drawer
-      v-model="drawer"
-      absolute
-      temporary
-      right
+        v-model="drawer"
+        absolute
+        right
+        temporary
     >
       <v-list dense>
         <v-list-item
-          v-for="item in items"
-          :key="item.title"
-          :to="item.link"
-          link
+            v-for="item in items"
+            :key="item.title"
+            :to="item.link"
+            link
         >
           <v-list-item-icon>
             <v-icon>mdi-{{ item.icon }}</v-icon>
@@ -67,10 +67,10 @@ export default {
     return {
       drawer: false,
       items: [
-        { title: 'Home', link: '/', icon: 'home' },
-        { title: 'Store', link: 'store', icon: 'store' },
-        { title: 'Cart', link: 'cart', icon: 'cart' },
-        { title: 'Contact', link: 'contact,', icon: 'email'}
+        {title: 'Home', link: '/', icon: 'home'},
+        {title: 'Store', link: 'store', icon: 'store'},
+        {title: 'Cart', link: 'cart', icon: 'cart'},
+        {title: 'Contact', link: 'contact,', icon: 'email'}
       ]
     }
   },

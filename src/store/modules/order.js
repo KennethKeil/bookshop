@@ -6,12 +6,10 @@ export default {
         items: {},
     },
 
-    mutations: {
-        
-    },
+    mutations: {},
 
     actions: {
-        getOrder({ state }) {
+        getOrder({state}) {
             return state.items;
         },
         setOrder(state) {

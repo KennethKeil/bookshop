@@ -1,13 +1,13 @@
 <template>
   <v-sheet
-    :height="sheetHeight"
-    class="overflow-hidden"
-    style="position: relative;"
+      :height="sheetHeight"
+      class="overflow-hidden"
+      style="position: relative;"
   >
     <v-container class="fill-height">
       <v-row
-        align="center"
-        justify="center"
+          align="center"
+          justify="center"
       >
         <h1 class="display-3 hidden-xs-only">
           Willkommen im Buchladen!
@@ -25,11 +25,16 @@ export default {
   computed: {
     sheetHeight() {
       switch (this.$vuetify.breakpoint.name) {
-        case 'xs': return '200px'
-        case 'sm': return '300px'
-        case 'md': return '300px'
-        case 'lg': return '300px'
-        case 'xl': return '350px'
+        case 'xs':
+          return '200px'
+        case 'sm':
+          return '300px'
+        case 'md':
+          return '300px'
+        case 'lg':
+          return '300px'
+        case 'xl':
+          return '350px'
       }
       return '300px'
     }
