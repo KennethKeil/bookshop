@@ -106,6 +106,7 @@ export default {
     ...mapActions('cart', ['checkout']),
     submit() {
       console.log("createOrderFunction aufrufen");
+      this.$store.commit('order/init', this.name, this.street, this.zip, this.city)
       this.$refs.checkoutRef.redirectToCheckout({items: this.lineItems})
     },
     /*

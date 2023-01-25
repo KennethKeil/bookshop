@@ -6,12 +6,20 @@ export default {
         items: {},
     },
 
-    mutations: {},
+    mutations: {
+        init(state, name, street, zip, city) {
+            state.items.name = name
+            state.items.street = street
+            state.items.zip = zip
+            state.items.city = city
+        }
+    },
 
     actions: {
         getOrder({state}) {
             return state.items;
-        },
+        }
+        ,
         setOrder(state) {
             state.items.name = 'Kenneth';
             state.items.street = 'Musterstr. 1';
@@ -22,6 +30,9 @@ export default {
             console.log(state.items.street);
             console.log(state.items.zip);
             console.log(state.items.city);
-        },
-    },
-};
+        }
+        ,
+    }
+    ,
+}
+;
