@@ -2,11 +2,11 @@
   <v-container>
     <v-row>
       <v-col sm="3" offset-lg="1">
-        <v-text-field v-model="search" label="Search" @input="filterProducts" />
+        <v-text-field v-model="search" label="Suche" @input="filterProducts" />
       </v-col>
       <v-col sm="9" lg="7">
         <div>
-          <h2>Books</h2>
+          <h2>Alle Bücher</h2>
           <!-- list of product cards that wraps -->
           <v-row>
             <v-col

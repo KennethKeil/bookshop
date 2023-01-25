@@ -3,7 +3,7 @@
     <v-row>
         <v-col sm="8" offset-md="2" lg="4" offset-lg="2">
           <div>
-            <h2>Shopping Cart</h2>
+            <h2>Bestellübersicht</h2>
             <v-row
               v-for="product in products" :key="product.id"
             >

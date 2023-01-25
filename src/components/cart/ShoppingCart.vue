@@ -3,6 +3,7 @@
     outlined
     min-width="100%"
     class="mb-5 pa-4"
+    style="background-color: #f8f9fa; box-shadow: 0px 0px 5px 0px #ccc"
   >
     <div class="d-flex">
       <div class="d-flex flex-column justify-center">
@@ -24,8 +25,9 @@
           @click="removeProductFromCart(product)"
           outlined
           small
+          style="width: 140px"
         >
-          Remove from Cart
+          entfernen
         </v-btn>
       </div>
     </div>

@@ -1,6 +1,6 @@
 <template>
-    <v-card outlined>
-        <v-card-title>Payment Details</v-card-title>
+    <v-card class="c-box" outlined style="background-color: #f8f9fa; box-shadow: 0px 0px 5px 0px #ccc">
+        <v-card-title>Bezahl Details</v-card-title>
 
         <v-card-text>
             <p>Total: ${{total}}</p>
@@ -8,7 +8,7 @@
             <v-text-field label="Straße" v-model="street" :error-messages="streetErrors" />
             <v-text-field label="PLZ" v-model="zip" :error-messages="zipErrors" />
             <v-text-field label="Stadt" v-model="city" :error-messages="cityErrors" />
-            <button @click="displayOrder">Display Order</button>
+            <!--<button @click="displayOrder">Display Order</button>-->
             <stripe-checkout
               ref="checkoutRef"
               mode="payment"
@@ -18,7 +18,7 @@
               :cancel-url="cancelURL"
               @loading="v =>loading = v"
             />
-            <v-btn color="primary" @click="submit" :disabled="!validForm">Checkout</v-btn>
+            <v-btn color="primary" class="pay-button" @click="submit" :disabled="!validForm">bezahlen</v-btn>
         </v-card-text>
     </v-card>
 </template>
@@ -108,16 +108,24 @@ export default {
             console.log("createOrderFunction aufrufen");
             this.$refs.checkoutRef.redirectToCheckout({items: this.lineItems})
         },
+        /*
         displayOrder() {
             console.log("Name: ", this.name);
             console.log("Street: ", this.street);
             console.log("Zip: ", this.zip);
             console.log("City: ", this.city);
         }
+        */
     }
 }
 </script>
 
 <style scoped>
-
+.pay-button {
+  padding: 30px 20px;
+  margin: 10px;
+}
+.c-box {
+  margin-top: 10px;
+}
 </style>

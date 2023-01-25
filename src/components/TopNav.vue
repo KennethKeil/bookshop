@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app-bar color="primary" dark>
-      <v-toolbar-title class="text-lg-center" @click="navigateToHome">Bookshop.de</v-toolbar-title>
+      <v-toolbar-title class="text-lg-center" @click="navigateToHome">Buchladen.de</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -22,7 +22,7 @@
         </v-btn>
         <v-btn to="store" text>
           <v-icon>mdi-store</v-icon>
-          Store
+          Bücher
         </v-btn>
         <v-btn to="cart" text>
           <v-icon>mdi-cart</v-icon>
