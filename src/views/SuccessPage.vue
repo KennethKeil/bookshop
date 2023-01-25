@@ -52,7 +52,7 @@ export default {
         });
       });
 
-      // axios.post(`https://ivm108.informatik.htw-dresden.de/ewa/g17/php-backend/update.php`, product)
+      // axios.post(`https://ivm108.informatik.htw-dresden.de/ewa/g17/php-backend/create.php`, order)
 
       localStorage.clear()
       this.$store.commit('cart/clearCart');
