@@ -47,7 +47,14 @@ export default {
       this.cartProducts.forEach(cartProduct => {
         this.products.forEach(product => {
           if (cartProduct.id === product.id) {
-            // axios.put(`https://ivm108.informatik.htw-dresden.de/ewa/g17/php-backend/update.php`, product)
+            /*
+            axios.put(`https://ivm108.informatik.htw-dresden.de/ewa/g17/php-backend/update.php`, product)
+            .then(results => {
+              if(results){
+                
+              }
+            })
+            */
           }
         });
       });
