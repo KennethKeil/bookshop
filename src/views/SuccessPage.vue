@@ -34,7 +34,8 @@ export default {
       cartProducts: 'cartProducts',
     }),
     ...mapState({
-      products: state => state.products.items
+      products: state => state.products.items,
+      order: state => state.order,
     }),
   },
 
@@ -52,6 +53,8 @@ export default {
         });
       });
 
+      console.log("Test Order");
+      // console.log(order.name);
       // axios.post(`https://ivm108.informatik.htw-dresden.de/ewa/g17/php-backend/create.php`, order)
 
       localStorage.clear()

@@ -105,18 +105,16 @@ export default {
   methods: {
     ...mapActions('cart', ['checkout']),
     submit() {
-      console.log("createOrderFunction aufrufen");
-      this.$store.commit('order/init', this.name, this.street, this.zip, this.city)
+      console.log("initOrder Testpoint 1");
+
+      console.log("Name: ", this.name);
+      console.log("Street: ", this.street);
+      console.log("Zip: ", this.zip);
+      console.log("City: ", this.city);
+
+      this.$store.commit('order/initOrder', this.name, this.street, this.zip, this.city)
       this.$refs.checkoutRef.redirectToCheckout({items: this.lineItems})
     },
-    /*
-    displayOrder() {
-        console.log("Name: ", this.name);
-        console.log("Street: ", this.street);
-        console.log("Zip: ", this.zip);
-        console.log("City: ", this.city);
-    }
-    */
   }
 }
 </script>
